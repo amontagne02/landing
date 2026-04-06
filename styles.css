@@ -258,6 +258,7 @@ p {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.25rem;
+  position: relative;
   transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
 }
 
@@ -288,6 +289,33 @@ p {
   font-size: 0.83rem;
   font-weight: 700;
   margin-bottom: 0.7rem;
+}
+
+.product-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-link:hover .badge {
+  background: var(--accent-soft);
+}
+
+.badge-popular {
+  position: absolute;
+  top: -0.65rem;
+  right: -0.65rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(255, 99, 0, 0.45);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .faq-list {
