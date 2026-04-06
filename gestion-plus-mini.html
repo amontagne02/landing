@@ -10,6 +10,7 @@
     />
     <meta name="theme-color" content="#0a0a0a" />
     <meta name="robots" content="index,follow" />
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -18,7 +19,7 @@
     <header class="site-header" id="inicio">
       <div class="container nav-wrap">
         <a class="brand" href="index.html#inicio" aria-label="Inicio Gestion Plus">
-          <span class="brand-mark" aria-hidden="true">GP</span>
+          <img src="assets/logo.png" alt="Gestión Plus" class="logo-img">
           <span class="brand-text">Gestion Plus</span>
         </a>
         <nav class="main-nav" aria-label="Navegacion principal">
@@ -32,13 +33,41 @@
 
     <main id="contenido">
       <section class="section hero">
-        <div class="container reveal text-center-narrow">
-          <p class="eyebrow">Software de gestion</p>
-          <h1>Gestion Plus Mini</h1>
-          <p class="lead">Descripcion proximamente...</p>
-          <div class="hero-cta" style="justify-content: center;">
-            <a class="btn btn-primary btn-large" href="index.html#contacto">Solicitar Demo</a>
-            <a class="btn btn-secondary" href="index.html#productos">Ver Productos</a>
+        <div class="container reveal">
+          <div class="hero-grid">
+            <div class="hero-text">
+              <p class="eyebrow">Versión esencial de Gestión Plus</p>
+              <h1>Gestión Plus Mini</h1>
+              <p class="lead">Gestión Plus Mini es una versión simplificada de <a href="gestion-plus.html" class="accent-link">Gestión Plus</a>, pensada para negocios que necesitan cubrir las funciones esenciales de control y venta sin incorporar herramientas avanzadas de análisis y gestión interna. Está diseñada para comercios y emprendimientos que buscan orden, rapidez y confiabilidad en su operativa diaria.</p>
+              <p class="lead" style="margin-top: 1rem;">Esta versión se enfoca en el control de inventario y en un sistema de facturación tipo POS que permite registrar productos, procesar ventas de forma ágil, generar facturas con identificadores únicos y almacenar automáticamente cada operación en el historial de ventas. Todo funciona de manera integrada y automatizada, manteniendo la lógica y estabilidad de <a href="gestion-plus.html" class="accent-link">Gestión Plus</a>.</p>
+              <div class="hero-cta">
+                <a class="btn btn-primary btn-large" href="index.html#contacto">Solicitar Demo</a>
+                <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=LSFeML7vVHg" target="_blank" rel="noopener">Ver Video</a>
+              </div>
+            </div>
+            <div class="hero-video">
+              <div class="video-wrapper">
+                <a
+                  href="https://www.youtube.com/watch?v=LSFeML7vVHg"
+                  target="_blank"
+                  rel="noopener"
+                  class="video-thumbnail"
+                  aria-label="Ver video promocional de Gestión Plus Mini en YouTube"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/LSFeML7vVHg/maxresdefault.jpg"
+                    alt="Video promocional de Gestión Plus Mini"
+                    loading="lazy"
+                  />
+                  <span class="play-btn" aria-hidden="true">
+                    <svg viewBox="0 0 68 48" width="68" height="48">
+                      <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"/>
+                      <path d="M45,24 27,14v20" fill="#fff"/>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -46,34 +75,66 @@
       <section class="section alt">
         <div class="container reveal">
           <div class="text-center-narrow">
-            <p class="section-kicker">Caracteristicas</p>
-            <h2>Lo que ofrece Gestion Plus Mini</h2>
+            <p class="section-kicker">Publico objetivo</p>
+            <h2>¿Para quién es ideal Gestión Plus Mini?</h2>
           </div>
-          <div class="cards cards-3">
-            <article class="card pillar">
-              <span class="icon" aria-hidden="true">📦</span>
-              <h3>Caracteristica 1</h3>
-              <p>Descripcion de la caracteristica proximamente.</p>
-            </article>
-            <article class="card pillar">
-              <span class="icon" aria-hidden="true">📊</span>
-              <h3>Caracteristica 2</h3>
-              <p>Descripcion de la caracteristica proximamente.</p>
-            </article>
-            <article class="card pillar">
-              <span class="icon" aria-hidden="true">⚡</span>
-              <h3>Caracteristica 3</h3>
-              <p>Descripcion de la caracteristica proximamente.</p>
-            </article>
+          <div class="legal-content">
+            <ul class="feature-list">
+              <li>Negocios pequeños y puntos de venta sencillos</li>
+              <li>Comercios enfocados principalmente en la venta de productos</li>
+              <li>Emprendedores que desean orden y control sin complejidad</li>
+              <li>Negocios que no requieren análisis financieros avanzados</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container reveal">
+          <div class="text-center-narrow">
+            <p class="section-kicker">Comparativa</p>
+            <h2>Diferencias fundamentales</h2>
+          </div>
+          <div class="comparison-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th><a href="gestion-plus.html" class="accent-link">Gestión Plus</a></th>
+                  <th>Gestión Plus Mini</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Incorpora una gestión integral del negocio</td>
+                  <td>Se enfoca únicamente en inventario y ventas</td>
+                </tr>
+                <tr>
+                  <td>Permite registrar gastos, analizar costos y calcular beneficios</td>
+                  <td>No incluye análisis de gastos ni ganancias</td>
+                </tr>
+                <tr>
+                  <td>Incluye cálculo automático de pago a trabajadores</td>
+                  <td>No contempla control de pagos de salarios a trabajadores</td>
+                </tr>
+                <tr>
+                  <td>Ofrece un Dashboard interactivo con las métricas fundamentales del negocio</td>
+                  <td>No dispone de indicadores ni visualizaciones</td>
+                </tr>
+                <tr>
+                  <td>Ideal para negocios en crecimiento o que requieren control y análisis avanzados</td>
+                  <td>Ideal para negocios pequeños o con procesos simples</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
       <section class="section cta-block">
         <div class="container reveal cta-inner">
-          <h2>Interesado en Gestion Plus Mini?</h2>
-          <p class="text-narrow">Contactenos para una demo personalizada o mas informacion.</p>
-          <a class="btn btn-primary btn-large" href="index.html#contacto">Contactar</a>
+          <h2>Interesado en Gestión Plus Mini?</h2>
+          <p class="text-narrow">Conozca más sobre el sistema base en la página de <a href="gestion-plus.html" class="accent-link">Gestión Plus</a>.</p>
+          <a class="btn btn-primary btn-large" href="index.html#contacto">Solicitar Demo</a>
         </div>
       </section>
     </main>

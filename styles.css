@@ -96,6 +96,13 @@ p {
   font-size: 0.9rem;
 }
 
+.logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+
 .main-nav {
   display: flex;
   gap: clamp(0.75rem, 2vw, 1.5rem);
@@ -167,6 +174,19 @@ p {
   grid-template-columns: 1.15fr 1fr;
   gap: clamp(2rem, 3vw, 3.2rem);
   align-items: center;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.hero-text .lead {
+  max-width: none;
+}
+
+.hero-video .video-wrapper {
+  max-width: 100%;
+  margin-inline: 0;
 }
 
 .hero-copy h1 {
@@ -474,6 +494,200 @@ p {
 .site-footer nav a {
   color: var(--text-main);
   text-decoration: none;
+}
+
+.video-wrapper {
+  max-width: min(85%, 960px);
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.video-thumbnail {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+.video-thumbnail:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  transition: transform 200ms ease;
+  pointer-events: none;
+}
+
+.video-thumbnail:hover .play-btn {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.feature-list li strong {
+  color: var(--text-main);
+}
+
+.accent-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms ease, color 200ms ease;
+}
+
+.accent-link:hover,
+.accent-link:focus-visible {
+  color: var(--accent-soft);
+  border-bottom-color: var(--accent-soft);
+}
+
+.comparison-wrapper {
+  max-width: min(90%, 1000px);
+  margin-inline: auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.comparison-table thead th {
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 1.08rem;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 2px solid var(--accent);
+  white-space: nowrap;
+}
+
+.comparison-table tbody td {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.comparison-table tbody tr:nth-child(even) td {
+  background: rgba(26, 26, 26, 0.45);
+}
+
+.comparison-table tbody tr:hover td {
+  background: rgba(255, 99, 0, 0.06);
+}
+
+.comparison-table tbody td:first-child {
+  color: var(--text-main);
+}
+
+@media (max-width: 700px) {
+  .comparison-table {
+    font-size: 0.92rem;
+  }
+
+  .comparison-table thead th,
+  .comparison-table tbody td {
+    padding: 0.7rem 0.8rem;
+  }
+}
+
+.highlight-quote {
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  margin: 1.2rem 0;
+  font-style: italic;
+  color: var(--text-main);
+  background: rgba(255, 99, 0, 0.05);
+  border-radius: 0 8px 8px 0;
+}
+
+.feature-block {
+  margin-bottom: 2.5rem;
+}
+
+.feature-block:last-child {
+  margin-bottom: 0;
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+}
+
+.feature-block h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  margin-bottom: 0.75rem;
+}
+
+.feature-block > p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.feature-block .feature-list {
+  margin-bottom: 1rem;
 }
 
 .legal-content {
