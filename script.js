@@ -86,3 +86,63 @@ document.addEventListener('keydown', (e) => {
     closeMobileNav();
   }
 });
+
+const telefonoInput = document.getElementById('telefono');
+const viaPreferidaGroup = document.getElementById('via-preferida-group');
+
+if (telefonoInput && viaPreferidaGroup) {
+  telefonoInput.addEventListener('input', () => {
+    if (telefonoInput.value.trim() !== '') {
+      viaPreferidaGroup.style.display = 'block';
+    } else {
+      viaPreferidaGroup.style.display = 'none';
+    }
+  });
+}
+
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    const existingStatus = contactForm.querySelector('.form-status');
+    if (existingStatus) existingStatus.remove();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      const statusDiv = document.createElement('div');
+      statusDiv.className = 'form-status';
+
+      if (response.ok) {
+        statusDiv.classList.add('success');
+        statusDiv.textContent = '¡Gracias! Su mensaje ha sido enviado correctamente. Nos pondremos en contacto pronto.';
+        contactForm.reset();
+        if (viaPreferidaGroup) viaPreferidaGroup.style.display = 'none';
+      } else {
+        statusDiv.classList.add('error');
+        const data = await response.json();
+        statusDiv.textContent = data.error || 'Hubo un problema al enviar el mensaje. Por favor intente de nuevo.';
+      }
+
+      contactForm.appendChild(statusDiv);
+    } catch (error) {
+      const statusDiv = document.createElement('div');
+      statusDiv.className = 'form-status error';
+      statusDiv.textContent = 'Hubo un error de conexión. Por favor intente de nuevo.';
+      contactForm.appendChild(statusDiv);
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
