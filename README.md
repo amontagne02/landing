@@ -1,15 +1,10 @@
 # Gestión Plus — Landing Page
 
-> Sistema de gestión empresarial automatizado en Excel y Google Sheets
-
-[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat-square)](https://amontagne02.github.io/landing/)
-[![License](https://img.shields.io/badge/License-Proprietary-orange?style=flat-square)](#)
-
----
+> Servicios de desarrollo de sistemas de gestión empresarial automatizados
 
 ## 📋 Descripción
 
-**Gestión Plus** es una landing page profesional para un negocio de herramientas de gestión automatizada para negocios. El sitio presenta los servicios y productos de la empresa, permitiendo a potenciales clientes conocer las soluciones disponibles y contactar para solicitar demos o información adicional.
+**Gestión Plus** es una landing page profesional para un servicio de desarrollo de herramientas de gestión automatizada para negocios. El sitio presenta los servicios y productos de la empresa, permitiendo a potenciales clientes conocer las soluciones disponibles y contactar para solicitar servicios o información adicional.
 
 ### Productos
 
@@ -25,7 +20,7 @@
 
 - **HTML5** — Estructura semántica
 - **CSS3** — Estilos con variables CSS, Grid, Flexbox
-- **JavaScript (Vanilla)** — Interactividad sin dependencias
+- **JavaScript** — Interactividad sin dependencias
 - **GitHub Pages** — Hosting estático
 
 ---
@@ -34,7 +29,7 @@
 
 ```
 ├── assets/
-│   └── logo.png                    # Logo oficial (fondo transparente)
+│   └── logo.png                    # Logo oficial
 ├── index.html                      # Landing page principal
 ├── gestion-plus.html              # Página del producto principal
 ├── gestion-plus-mini.html         # Página de Gestión Plus Mini
@@ -78,30 +73,6 @@
 ## 🚀 Despliegue
 
 El sitio está configurado para desplegarse automáticamente en **GitHub Pages**.
-
-### Commits y Push
-
-```bash
-git add -A
-git commit -m "Descripción de cambios"
-git push origin main
-```
-
-GitHub Pages se actualizará automáticamente tras el push.
-
----
-
-## 🔧 Desarrollo Local
-
-### Verificar cambios localmente
-
-Abre `index.html` directamente en tu navegador o usa un servidor local:
-
-```bash
-# Con Python (desde la raíz del proyecto)
-python -m http.server 8000
-# Luego visita http://localhost:8000
-```
 
 ---
 
@@ -154,5 +125,3 @@ Para consultas sobre los servicios de Gestión Plus:
 - Las imágenes de productos/servicios son placeholders que pueden reemplazarse según necesidad.
 
 ---
-
-*Documentación generada automáticamente — Abril 2026*
