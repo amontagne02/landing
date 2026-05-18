@@ -40,7 +40,7 @@ p {
 }
 
 .container {
-  width: min(var(--max-width), 92vw);
+  width: min(var(--max-width), 87vw);
   margin-inline: auto;
 }
 
@@ -417,7 +417,7 @@ p {
 
 .text-center-narrow {
   text-align: center;
-  max-width: min(60%, 800px);
+  max-width: min(90%, 800px);
   margin-inline: auto;
   margin-bottom: 2.5rem;
 }
@@ -519,7 +519,7 @@ p {
 }
 
 .text-narrow {
-  max-width: min(60%, 800px);
+  max-width: min(90%, 800px);
   margin-inline: auto;
 }
 
@@ -581,7 +581,7 @@ p {
 }
 
 .video-wrapper {
-  max-width: min(85%, 960px);
+  max-width: min(100%, 960px);
   margin-inline: auto;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);
@@ -681,7 +681,7 @@ p {
 }
 
 .comparison-wrapper {
-  max-width: min(90%, 1000px);
+  max-width: 100%;
   margin-inline: auto;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -775,7 +775,7 @@ p {
 }
 
 .legal-content {
-  max-width: min(60%, 900px);
+  max-width: min(90%, 900px);
   margin-inline: auto;
 }
 
@@ -987,5 +987,58 @@ body.mobile-nav-open {
 
   .main-nav {
     display: none;
+  }
+
+  .text-center-narrow,
+  .text-narrow,
+  .legal-content {
+    max-width: 100%;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .comparison-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --max-width: 100%;
+  }
+
+  .container {
+    width: 85vw;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .card {
+    padding: 0.85rem;
+  }
+
+  .btn-large {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .feature-list li {
+    font-size: 0.95rem;
+  }
+
+  .faq-trigger {
+    font-size: 0.92rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
   }
 }
