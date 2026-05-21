@@ -147,6 +147,7 @@ p {
 .section-intro {
   color: var(--text-muted);
   max-width: 70ch;
+  margin-inline: auto;
   margin-bottom: 2rem;
 }
 
